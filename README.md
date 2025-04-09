@@ -5,7 +5,7 @@ To repozytorium służy jako **strona do hostowania i udostępniania plików ISO
 ## 🌐 Strona
 
 👉 Dostęp do plików ISO:  
-**[https://twoja-nazwa.github.io/iso-host](https://twoja-nazwa.github.io/iso-host)**  
+**[https://3lines2files.github.io/3L2F-iso/](https://3lines2files.github.io/3L2F-iso/)**  
 
 ## 📂 Zawartość
 
