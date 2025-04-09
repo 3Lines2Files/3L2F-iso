@@ -1,4 +1,4 @@
-# 💿 ISO File Hosting via GitHub Pages
+# 💿 3L2F Iso Host
 
 To repozytorium służy jako **strona do hostowania i udostępniania plików ISO**, działająca dzięki [GitHub Pages](https://pages.github.com/).
 
@@ -6,7 +6,6 @@ To repozytorium służy jako **strona do hostowania i udostępniania plików ISO
 
 👉 Dostęp do plików ISO:  
 **[https://twoja-nazwa.github.io/iso-host](https://twoja-nazwa.github.io/iso-host)**  
-_(Zmień `twoja-nazwa` na swoją nazwę użytkownika GitHub)_
 
 ## 📂 Zawartość
 
