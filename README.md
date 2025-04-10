@@ -11,10 +11,10 @@ To repozytorium służy jako **strona do hostowania i udostępniania plików ISO
 
 | Nazwa pliku ISO              | Opis                                |
 |------------------------------|-------------------------------------|
-| `example-linux.iso`          | Przykładowa dystrybucja Linuksa     |
-| `custom-os-build.iso`        | Niestandardowy system operacyjny    |
-| `any-other.iso`              | Inny plik ISO                       |
-
+| `ubuntu.iso`                 | Ubuntu                              |
+| `linuxmint.iso`              | Linux Mint                          |
+| `archlinux.iso`              | Arch Linux                          |
+| `fedora.iso`                 | Fedora                              |
 ## 🔧 Z czego zbudowano stronę?
 
 Strona została stworzona przy użyciu:
