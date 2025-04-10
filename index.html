@@ -8,13 +8,45 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
+        margin: 0;
+        padding: 0;
         background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        overflow: hidden;
       }
 
+      /* Deszcz */
+      .rain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: transparent;
+        z-index: 0;
+      }
+
+      .drop {
+        position: absolute;
+        bottom: 100%;
+        width: 2px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(110vh);
+        }
+      }
+
+      /* Szkło */
       .glass {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
       }
 
       .fade-in {
@@ -40,16 +72,18 @@
       }
     </style>
   </head>
-  <body class="text-white font-sans min-h-screen flex items-center justify-center p-6">
-    <div class="w-full max-w-2xl text-center fade-in">
+  <body class="text-white font-sans flex items-center justify-center min-h-screen relative p-6">
+
+    <!-- Deszcz -->
+    <div class="rain" id="rain"></div>
+
+    <div class="w-full max-w-2xl text-center fade-in relative z-10">
       <h1 class="text-5xl font-extrabold mb-6 text-white drop-shadow-xl">
         🐧 Linux ISO Hosting
       </h1>
-      <p class="text-gray-400 mb-10 text-lg">
-        Wybierz dystrybucję i pobierz obraz systemu:
-      </p>
+      <p class="text-gray-300 mb-10 text-lg">Wybierz dystrybucję i pobierz obraz systemu:</p>
 
-      <div class="glass rounded-2xl shadow-xl p-8">
+      <div class="glass rounded-2xl shadow-2xl p-8">
         <ul class="space-y-5">
           <li>
             <a
@@ -78,5 +112,21 @@
         </ul>
       </div>
     </div>
+
+    <!-- Generowanie deszczu -->
+    <script>
+      const rain = document.getElementById("rain");
+      const drops = 150;
+
+      for (let i = 0; i < drops; i++) {
+        const drop = document.createElement("div");
+        drop.classList.add("drop");
+        drop.style.left = Math.random() * 100 + "vw";
+        drop.style.animationDuration = 0.5 + Math.random() * 1.5 + "s";
+        drop.style.opacity = Math.random();
+        drop.style.height = 10 + Math.random() * 20 + "px";
+        rain.appendChild(drop);
+      }
+    </script>
   </body>
 </html>
